@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% extends 'PatientPage.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">PATIENT DETAILS</h4>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Patient Name</th>
+                            <th>Patient Age</th>
+
+                            <th>Reason</th>
+                              <th>Blood Group</th>
+                               <th>Unit</th>
+
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                                  {% for d in data %}
+        <tr>
+            <td>{{d.patientname}}</td>
+
+
+
+            <td>{{d.patientage}}</td>
+            <td>{{d.reason}}</td>
+            <td>{{d.bloodgroup}}</td>
+            <td>{{d.unit}}</td>
+
+
+
+
+        </tr>
+        {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+</body>
+</html>
+{% endblock %}

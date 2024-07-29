@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="{% url 'davedonorfn' %}" enctype="multipart/form-data">
+     {% csrf_token %}
+
+<div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Donor's Details</h6>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="" name="pname">
+                                <label for="floatingInput">Name</label>
+
+                            </div>
+                            <div>
+                                <input type="file" name="image"><br><br>
+                            </div>
+<!--                            <div class="form-floating mb-3">-->
+<!--                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">-->
+<!--                                <label for="floatingPassword">Password</label>-->
+<!--                            </div>-->
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="pblood">
+                                    <option selected="">Blood Group</option>
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
+                                </select>
+                                <label for="floatingSelect"></label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 150px;" name="paddress"></textarea>
+                                <label for="floatingTextarea">Address</label><br><br>
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="Contact" name="pcontact"><br><br>
+
+                            </div>
+                            <div>
+                                <button>Done</button>
+                            </div>
+                        </div>
+                    </div>
+
+</body>
+</html>
+{% endblock %}

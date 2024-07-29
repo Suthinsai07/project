@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% extends 'DonorPage.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post" action="{% url 'savedonatebloodfn' %}" enctype="multipart/form-data" style="text-align: center;margin-left: 200px;">
+    {% csrf_token %}
+
+<div class="col-sm-12 col-xl-6" style="text-align: center;">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4"> DONATE BLOOD</h6>
+                           <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe" name="dname" >
+                            <label for="floatingText">Donor Name</label>
+                        </div>
+
+
+
+                         <div class="form-floating mb-4">
+                            <input type="number" class="form-control" id="floatingPassword" placeholder="Age" name="dage">
+                            <label for="floatingPassword"> Donor Age</label>
+                         </div>
+                            <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe" name="ddis">
+                            <label for="floatingText">Disease (If any)</label>
+                        </div>
+                             <div class="form-floating mb-3">
+                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="dblood" style="padding-top: 15px;" >
+                                    <option selected="">Blood Group</option>
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
+                                </select>
+                        </div>
+                            <div class="form-floating mb-4">
+                            <input type="number" class="form-control" id="floatingPassword" placeholder="Age" name="dunit">
+                            <label for="floatingPassword"> Unit inml</label>
+                         </div>
+<!--                            <div class="form-floating mb-3">-->
+<!--                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="dstatus" style="padding-top: 15px;" value="None" >-->
+<!--                                    <option selected="">status</option>-->
+<!--                                    <option>None</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+
+                            <div style="text-align: center;">
+                                <button type="submit" class="btn btn-danger m-2">DONATE</button>
+
+
+
+
+</body>
+</html>
+{% endblock %}

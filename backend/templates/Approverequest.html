@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--<form method="post" action="{% url 'savedapproverequest' sid=data.id %}"  >-->
+<!--    {% csrf_token %}-->
+
+<div class="col-sm-12 col-xl-6" style="text-align: center;">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4"> DONATE BLOOD</h6>
+                           <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe" name="dname" value="{{data.donorname}}">
+                            <label for="floatingText">Donor Name</label>
+                        </div>
+
+
+
+                         <div class="form-floating mb-4">
+                            <input type="number" class="form-control" id="floatingPassword" placeholder="Age" name="dage" value="{{data.donorage}}">
+                            <label for="floatingPassword"> Donor Age</label>
+                         </div>
+                            <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe" name="ddis" value="{{data.disease}}">
+                            <label for="floatingText">Disease (If any)</label>
+                        </div>
+                             <div class="form-floating mb-3">
+                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="dblood" style="padding-top: 15px;"  value="{{data.bloodgroup}}">
+                                    <option selected="">Blood Group</option>
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
+                                </select>
+                        </div>
+                            <div class="form-floating mb-4">
+                            <input type="number" class="form-control" id="floatingPassword" placeholder="Age" name="dunit" value="{{data.unit}}">
+                            <label for="floatingPassword"> Unit inml</label>
+                         </div>
+<!--                            <div class="form-floating mb-3">-->
+<!--                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="dstatus" style="padding-top: 15px;" value="None" >-->
+<!--                                    <option selected="">status</option>-->
+<!--                                    <option>None</option>-->
+<!--                                    <option>Approve</option>-->
+<!--                                </select>-->
+                            <div style="text-align: center;">
+                                <button type="submit" class="btn btn-danger m-2">Approve</button>
+
+
+
+
+</body>
+</html>
+{% endblock %}

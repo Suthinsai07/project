@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Blood Donation Details</h4>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Donor's Name</th>
+                            <th>Disease</th>
+
+                            <th>Age</th>
+                              <th>Blood Group</th>
+                               <th>Unit</th>
+                               <th>Action</th>
+<!--                              <th>Action</th>-->
+
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                                  {% for d in data %}
+        <tr>
+            <td>{{d.donorname}}</td>
+
+
+
+            <td>{{d.disease}}</td>
+            <td>{{d.donorage}}</td>
+            <td>{{d.bloodgroup}}</td>
+            <td>{{d.unit}}</td>
+<!--            <td>-->
+<!--                 <a href="{% url 'approverequest' sid=d.id %}">-->
+
+
+
+<!--                 <button type="submit" class="btn btn-primary mr-2">Approve</button>-->
+<!--                 </a>-->
+
+
+
+<!--            </td>-->
+            <td>
+
+                 <button type="submit" class="btn btn-primary mr-2">Reject</button>
+            </td>
+
+
+        </tr>
+        {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+</body>
+</html>
+{% endblock %}
